@@ -237,3 +237,44 @@ a:hover {
   font-size: 0.875rem;
   color: #aaa; /* subtle gray for legal/footer notes */
 }
+
+/* ============================
+   W4.3-G — Fine-tune typography
+   ============================ */
+
+/* Headings use Playfair; body stays Inter (already set above) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 0.005em;
+  margin: 0 0 0.6em;
+}
+
+/* Fluid, magazine-y sizes */
+h1 { font-size: clamp(2.4rem, 4vw + 1rem, 4rem); line-height: 1.12; }
+h2 { font-size: clamp(1.75rem, 1.4vw + 1rem, 2.4rem); line-height: 1.2; }
+h3 { font-size: clamp(1.25rem, 0.9vw + 1rem, 1.6rem); line-height: 1.3; }
+
+/* Body copy rhythm */
+p { margin: 0 0 1.15em; }
+
+/* “Lead” paragraph under hero title */
+.lead {
+  font-size: clamp(1.1rem, 0.6vw + 1rem, 1.35rem);
+  line-height: 1.8;
+}
+
+/* Lists read cleanly in long-form sections */
+ul, ol { margin: 0 0 1.2em 1.3em; }
+
+/* Links are typographic accents (color already defined) */
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 2px;
+}
+
+/* Subtle bold/italic tuning */
+strong { font-weight: 700; }
+em     { font-style: italic; }
