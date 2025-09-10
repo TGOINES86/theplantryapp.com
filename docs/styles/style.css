@@ -162,3 +162,38 @@ h3 {
   color: var(--color-accent-deep);
   text-decoration: underline;
 }
+
+/* ================================
+   W4.3-D — Buttons
+   ================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-deep);
+  color: var(--color-bg);
+}
+
+/* Ghost button */
+.btn-ghost {
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-accent-deep);
+  color: var(--color-accent-deep);
+}
