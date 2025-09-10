@@ -217,3 +217,23 @@ a:hover {
   font-size: 0.875rem;
   color: #aaa; /* subtle gray for footer/legal text */
 }
+
+/* ================================
+   W4.3-E — Links + fineprint
+   ================================ */
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-deep);
+  text-decoration: underline;
+}
+
+.fineprint {
+  font-size: 0.875rem;
+  color: #aaa; /* subtle gray for legal/footer notes */
+}
