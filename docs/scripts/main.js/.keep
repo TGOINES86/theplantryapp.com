@@ -1,1 +1,25 @@
 Tiny enhancements only (defer heavy JS)
+
+// Mobile nav
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('site-nav');
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const open = nav.style.display === 'flex';
+    nav.style.display = open ? 'none' : 'flex';
+    nav.style.flexDirection = 'column';
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+}
+
+// Sticky header shadow
+const header = document.querySelector('[data-elevate]');
+if (header) {
+  const f = () => header.classList.toggle('is-scrolled', window.scrollY > 10);
+  window.addEventListener('scroll', f, { passive: true });
+  f();
+}
+
+// Year stamp
+const yr = document.getElementById('year');
+if (yr) yr.textContent = new Date().getFullYear();
