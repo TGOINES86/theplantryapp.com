@@ -518,3 +518,39 @@ section {
   border-color: var(--color-accent);
   transform: translateY(-2px);
 }
+
+/* ===============================
+   W4.3-L.2 — Card typography polish
+   =============================== */
+
+/* Card headings */
+.card h3 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.2px;
+}
+
+/* Card body copy */
+.card p {
+  margin: 0;                 /* first paragraph tight to heading */
+  color: rgb(228 228 228 / 92%);
+  line-height: 1.65;
+}
+
+/* Space multiple paragraphs consistently when they occur */
+.card p + p {
+  margin-top: 0.75rem;
+}
+
+/* If a link appears inside a card, keep it warm and subtle */
+.card a {
+  color: var(--color-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.card a:hover,
+.card a:focus {
+  color: var(--color-accent-deep);
+}
