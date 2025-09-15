@@ -585,3 +585,46 @@ section {
     max-width: 76rem; /* was 72rem earlier; small, tasteful bump */
   }
 }
+
+/* ============================================
+   W4.3-L.4 — Nav hover/focus polish + active
+   ============================================ */
+
+/* Base: remove default link underline in navs; we’ll control it */
+.site-nav a,
+.footer-nav a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-block: .25rem;
+  transition: color .18s ease, border-color .18s ease, text-underline-offset .18s ease;
+}
+
+/* Hover/Focus: warm accent and subtle underline hint */
+.site-nav a:hover,
+.site-nav a:focus,
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 65%, transparent);
+  outline: none;                 /* we’ll use :focus-visible below */
+  text-decoration: underline;    /* light editorial underline */
+  text-underline-offset: .15em;
+}
+
+/* Keyboard focus: accessible but refined */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: .375rem;
+}
+
+/* “Current page” treatment (use either attribute or class in HTML later) */
+.site-nav a[aria-current="page"],
+.footer-nav a[aria-current="page"],
+.site-nav a.is-active,
+.footer-nav a.is-active {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
