@@ -554,3 +554,34 @@ section {
 .card a:focus {
   color: var(--color-accent-deep);
 }
+
+/* ============================================
+   W4.3-L.3 — Responsive section spacing
+   ============================================ */
+
+/* 1) Comfortable vertical rhythm by default (desktop/tablet) */
+section {
+  padding-block: clamp(2.5rem, 6vw, 6rem); /* top & bottom only */
+}
+
+/* Give the global .wrap a little horizontal breathing room on all screens */
+.wrap {
+  padding-inline: 1.25rem; /* left & right */
+}
+
+/* 2) Phones: tighten vertical spacing a bit more */
+@media (max-width: 640px) {
+  section {
+    padding-block: 2rem;
+  }
+  .wrap {
+    padding-inline: 1rem;
+  }
+}
+
+/* 3) Very large screens: slightly wider content column */
+@media (min-width: 1280px) {
+  .wrap {
+    max-width: 76rem; /* was 72rem earlier; small, tasteful bump */
+  }
+}
