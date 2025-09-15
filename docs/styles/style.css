@@ -279,3 +279,35 @@ a {
 strong { font-weight: 700; }
 em     { font-style: italic; }
 
+/* ===============================
+   W4.3-H — Header/nav spacing & states
+   =============================== */
+
+.site-header {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav a {
+  margin-left: 2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:first-child {
+  margin-left: 0;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
