@@ -413,3 +413,50 @@ em     { font-style: italic; }
   justify-content: center;
   gap: 1rem;
 }
+/* ===============================
+   W4.3-K — Navigation bar styling
+   =============================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(14,14,14,0.85);        /* near-black with slight transparency */
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.brand-name {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: .3px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: .5rem .25rem;                  /* bigger hit area */
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color .2s ease, opacity .2s ease;
+  opacity: .9;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--color-accent);
+  opacity: 1;
+}
