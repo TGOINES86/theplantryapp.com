@@ -800,3 +800,12 @@ body {
   /* Let grid cards stack cleanly */
   .feature-grid { grid-template-columns: 1fr; gap: 1.25rem; }
 }
+
+/* W4.3-O — show mobile nav when toggled */
+@media (max-width: 820px) {
+  .site-nav.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-block: .5rem;
+  }
