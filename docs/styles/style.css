@@ -311,3 +311,66 @@ em     { font-style: italic; }
   color: var(--color-accent);
   text-decoration: underline;
 }
+/* ===============================
+   W4.3-I — Footer typography & spacing
+   =============================== */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-footer .wrap {
+  display: grid;
+  gap: 1.25rem 2rem;
+  align-items: center;
+}
+
+/* Brand row */
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 700;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+}
+
+/* Footer nav */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color .2s ease;
+  font-weight: 500;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Fine print */
+.fineprint {
+  margin-top: .25rem;
+  font-size: .9rem;
+  color: rgba(255,255,255,.75);
+}
+
+/* Wider screens: put brand | nav | copyright on one line */
+@media (min-width: 900px) {
+  .site-footer .wrap {
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .fineprint {
+    justify-self: end;
+    margin-top: 0;
+  }
+}
