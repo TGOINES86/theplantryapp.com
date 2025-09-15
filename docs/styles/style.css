@@ -628,3 +628,34 @@ button:focus-visible {
   border-color: var(--color-accent);
 }
 
+/* ============================================
+   W4.3-L.5 — Hero image & headline spacing
+   ============================================ */
+
+.hero {
+  padding-top: 2rem; /* reduce extra gap above image now that header is fixed */
+}
+
+.hero picture img {
+  max-height: 24rem;          /* trim height a bit for balance */
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.hero-copy {
+  margin-top: 2.5rem;          /* space between image and text */
+  text-align: center;
+}
+
+.hero-copy h1 {
+  margin-bottom: 1.25rem;      /* headline → lead */
+}
+
+.hero-copy .lead {
+  margin-bottom: 2rem;         /* lead → button group */
+}
+
+.cta-row {
+  gap: 1rem;
+  justify-content: center;
+}
