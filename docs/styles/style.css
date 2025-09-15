@@ -374,3 +374,42 @@ em     { font-style: italic; }
     margin-top: 0;
   }
 }
+
+/* ===============================
+   W4.3-J — Hero image sizing & headline rhythm
+   =============================== */
+
+.hero picture img {
+  display: block;
+  width: 100%;
+  max-height: 28rem;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.hero-copy {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.hero-copy h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.hero-copy .lead {
+  font-size: 1.15rem;
+  max-width: 45ch;
+  margin: 0 auto 2rem auto;
+  color: rgba(255,255,255,.85);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
