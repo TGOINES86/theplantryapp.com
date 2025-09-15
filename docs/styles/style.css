@@ -767,3 +767,36 @@ input:focus-visible {
 body {
   color: rgba(255,255,255,0.95);
 }
+
+/* ============================================
+   W4.3-N — Mobile responsiveness (nav + spacing)
+   ============================================ */
+
+/* Start with the toggle hidden on larger screens */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--color-text);
+  padding: .4rem .6rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+/* Phone / small tablets */
+@media (max-width: 820px) {
+  /* Show the hamburger, hide the horizontal nav */
+  .nav-toggle { display: inline-block; }
+  .site-nav   { display: none; }
+
+  /* Keep header content compact on mobile */
+  :root { --header-h: 64px; }        /* slightly shorter header */
+  .site-header .wrap { padding-block: 8px; }
+
+  /* Slightly tighter section rhythm on small screens */
+  section { padding-block: 2rem; }
+  .cta .wrap { padding: 1.25rem; }
+
+  /* Let grid cards stack cleanly */
+  .feature-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+}
