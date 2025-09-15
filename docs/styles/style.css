@@ -728,3 +728,42 @@ button:focus-visible {
   color: rgba(255,255,255,0.85);
   margin: 0 0 1rem 0;
 }
+
+/* ============================================
+   W4.3-M — Accessibility + focus polish
+   ============================================ */
+
+/* Skip link (already in your HTML) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: .75rem 1rem;
+  border-radius: .375rem;
+  font-weight: 600;
+  z-index: 200;
+  transition: top .2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  left: 1rem;
+  outline: 2px solid var(--color-accent-deep);
+  outline-offset: 2px;
+}
+
+/* Clear visible focus ring on all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: .375rem;
+}
+
+/* Slightly stronger base text color for contrast */
+body {
+  color: rgba(255,255,255,0.95);
+}
