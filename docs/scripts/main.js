@@ -1,43 +1,35 @@
 /* W4.3-O — Mobile menu toggle (robust + console check) */
-(function () {
+/* W4.4 - Mobile nav toggle (defensive) */
+
+(() => {
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('site-nav');
+  if (!toggle || !nav) return;
 
-  if (!toggle || !nav) {
-    console.warn('[nav] Missing .nav-toggle or #site-nav; mobile menu disabled.');
-    return;
-  }
-
-  // Set initial ARIA state
+  // Ensure starting state is closed on small screens
+  nav.classList.remove('open');
   toggle.setAttribute('aria-expanded', 'false');
 
-  // Toggle handler
-  function close() {
-    nav.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
-  function open() {
-    nav.classList.add('is-open');
-    toggle.setAttribute('aria-expanded', 'true');
+  function toggleNav() {
+    const isOpen = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
   }
 
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.contains('is-open');
-    isOpen ? close() : open();
+  toggle.addEventListener('click', toggleNav);
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleNav();
+    }
   });
 
-  // Close when a link is tapped (nice UX)
+  // Close menu when a nav link is clicked (mobile)
   nav.addEventListener('click', (e) => {
-    if (e.target.closest('a')) close();
+    const a = e.target.closest('a');
+    if (!a) return;
+    if (getComputedStyle(toggle).display !== 'none') {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
-
-  // Close on Escape
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
-  });
-
-  console.info('[nav] Mobile toggle initialized.');
 })();
-Commit message:
-feat(nav): robust mobile toggle + console diagnostics
-
