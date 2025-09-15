@@ -10,6 +10,7 @@
   --color-text: #f2f2f2;      /* soft off-white text */
   --color-accent: #d4a373;    /* warm earthy tan */
   --color-accent-deep: #8c5e3c; /* richer brown accent */
+  --header-h: 72px;  /* header height for layout offset */  
 }
 
 /* Global reset / base */
@@ -459,4 +460,29 @@ em     { font-style: italic; }
 .site-nav a:focus {
   color: var(--color-accent);
   opacity: 1;
+}
+
+/* ===============================
+   W4.3-K.1 — Fixed header on top
+   =============================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(14,14,14,0.85);
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.site-header .wrap {
+  min-height: var(--header-h);
+  padding-block: 12px; /* comfortable vertical breathing */
+}
+
+/* offset the page so content doesn't hide under the fixed header */
+body {
+  padding-top: calc(var(--header-h) + 8px);
 }
