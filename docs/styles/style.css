@@ -832,3 +832,19 @@ body {
     padding-block: .5rem;
   }
 }
+
+/* Keep header above content */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ensure the button sits above the slide-down menu */
+.nav-toggle {
+  position: relative;
+  z-index: 1300;
+}
+.site-nav {
+  z-index: 1200; /* slide-down lives under the toggle */
+}
