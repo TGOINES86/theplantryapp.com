@@ -881,18 +881,52 @@ body {
     padding: 0.5rem 1.5rem;
     display: none; /* stays hidden until toggled */
     flex-direction: column;
+
+     /* already present styles remain */
+    overflow: hidden;
+
+    /* animation bits */
+    opacity: 0;
+    transform: translateY(-4px);
+    max-height: 0;
+    pointer-events: none;
+    transition:
+      opacity 240ms ease,
+      transform 240ms ease,
+      max-height 240ms ease;
   }
 
   .site-nav.is-open {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 60vh;           /* big enough for links */
+    pointer-events: auto;
   }
 
   .site-nav a {
-    padding: 1rem 0;
+    padding: 1rem 1.25rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text); 
   }
 
   .site-nav a:last-child {
     border-bottom: none;
   }
+
+   .site-nav a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  } 
+/* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .site-nav,
+    .site-nav.is-open {
+      transition: none !important;
+      transform: none !important;
+    }
+   
 }
