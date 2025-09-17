@@ -848,3 +848,12 @@ body {
 .site-nav {
   z-index: 1200; /* slide-down lives under the toggle */
 }
+/* W4.4-D — Mobile nav visibility */
+@media (max-width: 960px) {
+  .site-nav {
+    display: none;                 /* hidden by default on small screens */
+  }
+  .site-nav.is-open {
+    display: block;                /* shown when JS toggles the class */
+  }
+}
