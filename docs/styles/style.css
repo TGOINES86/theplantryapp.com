@@ -869,3 +869,30 @@ body {
     margin-left: 0;            /* cancel desktop left-gap when stacked */
   }
 }
+/* W4.4-G — Improve mobile nav panel styling */
+@media (max-width: 899px) {
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.5rem;
+    display: none; /* stays hidden until toggled */
+    flex-direction: column;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .site-nav a:last-child {
+    border-bottom: none;
+  }
+}
