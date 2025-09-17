@@ -857,3 +857,15 @@ body {
     display: block;                /* shown when JS toggles the class */
   }
 }
+
+/* W4.4-F — Mobile nav spacing reset */
+@media (max-width: 899px) {
+  .site-nav a { 
+    display: block; 
+    padding: 0.75rem 0;
+    margin: 0;                 /* no indent */
+  }
+  .site-nav a + a {
+    margin-left: 0;            /* cancel desktop left-gap when stacked */
+  }
+}
