@@ -33,3 +33,23 @@
     }
   });
 })();
+
+// W4.4-D — Mobile nav toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Optional: close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+      nav.classList.remove('is-open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
