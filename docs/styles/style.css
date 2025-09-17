@@ -930,3 +930,42 @@ body {
     }
    
 }
+/* W4.5-B — Hero media framing & stability */
+.hero .media {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  overflow: hidden;
+  /* keep space even if image 404s */
+  aspect-ratio: 16 / 9;
+}
+
+.hero .media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #111; /* fallback tone behind transparent images */
+}
+
+/* Slightly taller frame on small screens for better feel */
+@media (max-width: 899px) {
+  .hero .media { aspect-ratio: 4 / 3; }
+}
+
+   /* W4.5-C — Editorial story media framing */
+.editorial .media {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.editorial .media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
