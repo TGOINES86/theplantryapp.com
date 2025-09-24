@@ -1055,4 +1055,5 @@ section {
 .footer-nav a { color: var(--color-text); text-decoration: none; }
 .footer-nav a:hover { text-decoration: underline; }
 .fineprint { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
+
    
