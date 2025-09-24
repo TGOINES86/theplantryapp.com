@@ -140,6 +140,16 @@
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
 }
+/* W4.8-D — Gentle section rhythm */
+section {
+  padding: 4rem 0;          /* vertical breathing room */
+}
+
+.wrap {
+  max-width: 72rem;         /* already set earlier */
+  margin: 0 auto;
+  padding: 0 1.5rem;        /* add horizontal padding */
+}
 
 /* Global reset / base */
 * {
