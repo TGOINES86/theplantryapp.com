@@ -514,6 +514,34 @@ em     { font-style: italic; }
   }
 }
 
+/* W4.9-A — Footer base styling */
+.site-footer {
+  padding: 2rem 0;
+  background: var(--color-bg);
+  color: var(--text-muted);
+  font-size: 0.875rem; /* slightly smaller fineprint */
+  text-align: center;
+}
+
+.site-footer a {
+  margin: 0 0.75rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+}
+
+.site-footer .brand-name {
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-right: 0.5rem;
+}
+
+
 /* ===============================
    W4.3-J — Hero image sizing & headline rhythm
    =============================== */
@@ -1227,4 +1255,4 @@ section {
     gap: 1rem;
   }
 }
-   
+
