@@ -969,3 +969,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+   /* W4.6-A — Section spacing & rhythm
+   Gives each section comfortable breathing room and a consistent vertical rhythm.
+   Uses clamp() so spacing adapts from mobile → desktop gracefully. */
+
+section {
+  padding-block: clamp(2rem, 4vw, 4rem);
+}
+
+/* Tighter top spacing when a section immediately follows the sticky header */
+.site-header + main > section:first-child {
+  padding-top: clamp(1.5rem, 3vw, 3rem);
+}
