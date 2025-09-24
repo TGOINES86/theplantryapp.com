@@ -1056,4 +1056,37 @@ section {
 .footer-nav a:hover { text-decoration: underline; }
 .fineprint { font-size: 0.9rem; color: rgba(255,255,255,0.6); }
 
+   /* W4.7-C — Header spacing refinement after icon removal */
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Brand text only (no icon) */
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Nav links stay inline on desktop */
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* On mobile, nav remains handled by previous is-open styles */
+@media (max-width: 899px) {
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
    
