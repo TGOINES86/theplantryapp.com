@@ -1256,3 +1256,59 @@ section {
   }
 }
 
+/* ================================
+   W4.9-D — Feature grid spacing & card balance
+   ================================ */
+
+.feature-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  padding-block: 3rem;
+}
+
+/* Each card sits on a subtle surface tone */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Lift gently on hover for mouse users */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Typographic balance */
+.card h3 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-strong);
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Adjust grid gap for small screens */
+@media (max-width: 599px) {
+  .feature-grid {
+    gap: 1.75rem;
+    padding-block: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+ 
