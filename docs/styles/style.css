@@ -1311,4 +1311,64 @@ section {
   }
 }
 
+/* ================================
+   W4.9-E — CTA button harmony
+   ================================ */
+
+/* Base button */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-2, 10px);
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .08s ease;
+  will-change: transform;
+}
+
+/* Primary (filled) */
+.btn-primary {
+  background: var(--accent);
+  color: var(--color-bg);
+  border: 1px solid var(--accent-shade);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--accent-strong);
+  color: var(--color-bg);
+  border-color: var(--accent-strong);
+}
+
+/* Ghost (outline) */
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+.btn-ghost:hover,
+.btn-ghost:focus {
+  color: var(--accent-strong);
+  border-color: var(--accent-strong);
+  background: color-mix(in oklab, var(--accent) 10%, transparent);
+}
+
+/* Subtle tap micro-feedback */
+@media (hover:hover) and (pointer:fine) {
+  .btn:active { transform: translateY(1px); }
+}
+
+/* Button row spacing */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+/* Tighten hero CTA spacing a touch on small screens */
+@media (max-width: 599px) {
+  .btn { padding: 0.7rem 1.1rem; }
+}
+
  
