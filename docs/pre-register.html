@@ -1,1 +1,65 @@
 Waitlist page (stub for later).
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pre-register — Plantry</title>
+  <meta name="description" content="Join the early access list for Plantry and get notified when TestFlight / Play Beta opens." />
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-name">Plantry</span></a>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false"><span class="sr-only">Toggle menu</span>☰</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/#features">Features</a>
+        <a href="/#stories">Stories</a>
+        <a href="/pre-register.html" aria-current="page">Pre-register</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap" style="padding-block: clamp(2rem, 6vw, 4rem); max-width: 42rem;">
+      <h1>Be first in line</h1>
+      <p class="lead">Join the early access list and help shape Plantry. We’ll email you when TestFlight / Play Beta opens.</p>
+
+      <div class="surface-1 radius-2 pad-5" style="margin-top: 1.25rem;">
+        <h2 style="margin: 0 0 .5rem;">Pre-register</h2>
+        <p class="text-muted" style="margin: 0 0 1rem;">This opens a short secure form in a new tab. It takes less than 30 seconds.</p>
+
+        <!-- TODO: Replace with your actual Google Form URL -->
+        <a class="btn btn-primary" href="https://docs.google.com/forms/" target="_blank" rel="noopener">Open the pre-registration form</a>
+
+        <p class="text-subtle" style="margin-top: 1rem; font-size: .9rem;">
+          We’ll only use your email to notify you about early access. You can opt out anytime.
+        </p>
+      </div>
+
+      <div style="margin-top: 2rem;">
+        <a class="text-link" href="/">← Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="brand-name">Plantry</span></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/contact.html">Contact</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/pre-register.html">Pre-register</a>
+      </nav>
+      <p class="fineprint">© <span id="year"></span> Plantry. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/scripts/main.js?v=3" defer></script>
+</body>
+</html>
