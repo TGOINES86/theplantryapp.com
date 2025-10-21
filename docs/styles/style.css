@@ -1371,4 +1371,39 @@ section {
   .btn { padding: 0.7rem 1.1rem; }
 }
 
+   /* ================================
+   W4.9-F — Stories typography polish
+   ================================ */
+
+.editorial .copy h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text-strong);
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 1.6vw + 1rem, 2.1rem);
+  line-height: 1.25;
+}
+
+.editorial .copy p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0 0 1rem;
+  max-width: 60ch;
+}
+
+.editorial .copy .text-link {
+  color: var(--accent);
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 2px;
+  transition: color .2s ease;
+}
+
+.editorial .copy .text-link:hover,
+.editorial .copy .text-link:focus {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
  
